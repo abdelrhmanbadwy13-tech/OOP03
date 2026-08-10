@@ -33,16 +33,107 @@ namespace FirstrApp8
             // A sealed class prevents the class from being inherited.
             // A sealed method prevents a method from being overridden in derived classes.
 
-           //c)
-             //No, a sealed method cannot be overridden because the sealed keyword prevents further overriding of the method in derived classes.
+            //c)
+            //No, a sealed method cannot be overridden because the sealed keyword prevents further overriding of the method in derived classes.
 
 
             #endregion
-        #region part2
+
+            #region part2
+
+            
+           // {
+    //            Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
+
+    //            DeliveryCenter center = new DeliveryCenter("Delivery Center");
+    //            center.Driver = driver;
+
+    //            StandardShipment standard = new StandardShipment(
+    //                "SH001",
+    //                "Laptop",
+    //                3,
+    //                80,
+    //                new DeliveryAddress("Cairo", "Nasr City", 10)
+    //            );
+
+    //            ExpressShipment express = new ExpressShipment(
+    //                "SH002",
+    //                "Mobile Phone",
+    //                2,
+    //                60,
+    //                new DeliveryAddress("Cairo", "Maadi", 20),
+    //                30
+    //            );
+
+    //            IntternationalShipment international = new IntternationalShipment(
+    //                "SH003",
+    //                "Television",
+    //                8,
+    //                120,
+    //                new DeliveryAddress("Cairo", "Heliopolis", 30),
+    //                "Germany",
+    //                100
+    //            );
+
+    //            center.AddShipment(standard);
+    //            center.AddShipment(express);
+    //            center.AddShipment(international);
+
+    //            Console.WriteLine("==========================================");
+    //            Console.WriteLine("Delivery Center");
+    //            Console.WriteLine("==========================================");
+    //            Console.WriteLine($"Driver : {center.Driver.FullName}");
+    //            Console.WriteLine("------------------------------------------");
+
+    //            center.PrintAllShipments();
+
+    //            Console.WriteLine("==========================================");
+    //            Console.WriteLine("Printing Using DeliveryHelper...");
+
+    //            Console.WriteLine("Standard Shipment Printed Successfully.");
+    //            Console.WriteLine("Express Shipment Printed Successfully.");
+    //            Console.WriteLine("International Shipment Printed Successfully.");
+
+    //            Console.WriteLine("==========================================");
+    //            Console.WriteLine("Updating Weight...");
+
+    //            Console.WriteLine($"Original Weight : {standard.Weight} KG");
+
+    //            standard.UpdateWeight(5);
+
+    //            Console.WriteLine($"Updated Weight : {standard.Weight} KG");
+
+    //            standard.UpdateWeight(5, 0.5m);
+
+    //            Console.WriteLine($"Updated Weight After Packing : {standard.Weight} KG");
+
+    //            Console.WriteLine("==========================================");
+    //            Console.WriteLine("Printing Using Shipment[]...");
+
+    //            Shipment[] shipments =
+    //            {
+    //    standard,
+    //    express,
+    //    international
+    //};
+
+    //            foreach (Shipment shipment in shipments)
+    //            {
+    //                if (shipment is StandardShipment)
+    //                    Console.WriteLine("Standard Shipment...");
+
+    //                else if (shipment is ExpressShipment)
+    //                    Console.WriteLine("Express Shipment...");
+
+    //                else if (shipment is IntternationalShipment)
+    //                    Console.WriteLine("International Shipment...");
+    //            }
+
+    //            Console.WriteLine("==========================================");
+    //        }
 
 
-
-        #endregion
+            #endregion
 
 
 
