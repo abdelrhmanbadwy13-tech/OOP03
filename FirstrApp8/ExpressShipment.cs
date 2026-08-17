@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FirstrApp8
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment , ITrackable ,IInsurable
     {
 
         private decimal extraFee;
@@ -35,17 +35,25 @@ namespace FirstrApp8
         }
         public override void PrintShipment()
         {
+
+            Console.WriteLine("Express Shipment");
+            Console.WriteLine();
             Console.WriteLine($"Tracking Code   : {TrackingCode}");
-            Console.WriteLine($"Description     : {Description}");
-            Console.WriteLine($"Weight          : {Weight} KG");
-            Console.WriteLine($"Delivery Fee    : {DeliveryFee} EGP");
+            //Console.WriteLine($"Description     : {Description}");
+            //Console.WriteLine($"Weight          : {Weight} KG");
+            //Console.WriteLine($"Delivery Fee    : {DeliveryFee} EGP");
             Console.WriteLine($"Extra Fee       : {ExtraFee} EGP");
             Console.WriteLine($"Estimated Cost  : {EstimatedCost} EGP");
         }
 
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode}is Out for Delivery .";
+        }
 
-
-
-
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 8 / 100;
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FirstrApp8
 {
-    internal class IntternationalShipment :Shipment
+    internal class IntternationalShipment :Shipment , ITrackable , IInsurable
     {
         private string destinationCountry;
         private decimal customsFee;
@@ -64,15 +64,28 @@ namespace FirstrApp8
 
         public override void PrintShipment()
         {
+
+            Console.WriteLine("International Shipment");
+            Console.WriteLine();
             Console.WriteLine($"Tracking Code       : {TrackingCode}");
-            Console.WriteLine($"Description         : {Description}");
-            Console.WriteLine($"Weight              : {Weight} KG");
-            Console.WriteLine($"Delivery Fee        : {DeliveryFee} EGP");
+           // Console.WriteLine($"Description         : {Description}");
+            //Console.WriteLine($"Weight              : {Weight} KG");
+            //Console.WriteLine($"Delivery Fee        : {DeliveryFee} EGP");
             Console.WriteLine($"Destination Country : {DestinationCountry}");
-            Console.WriteLine($"Customs Fee         : {CustomsFee} EGP");
+           // Console.WriteLine($"Customs Fee         : {CustomsFee} EGP");
             Console.WriteLine($"Estimated Cost      : {EstimatedCost} EGP");
         }
 
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} has been Delivered.";
+        }
 
+        public decimal CalculateInsurance()
+                 
+        {
+            return EstimatedCost * 12 / 100;
+        }
     }
-}
+    }
+

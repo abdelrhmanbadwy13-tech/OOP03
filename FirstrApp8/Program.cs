@@ -2,7 +2,7 @@
 using System.Xml.Linq;
 
 namespace FirstrApp8
-{ 
+{
     internal class Program
     {
         static void Main(string[] args)
@@ -42,100 +42,125 @@ namespace FirstrApp8
             #region part2
 
 
-            // {
-            //            Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
+            //{
+            //    Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
 
-            //            DeliveryCenter center = new DeliveryCenter("Delivery Center");
-            //            center.Driver = driver;
+            //    DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            //    center.Driver = driver;
 
-            //            StandardShipment standard = new StandardShipment(
-            //                "SH001",
-            //                "Laptop",
-            //                3,
-            //                80,
-            //                new DeliveryAddress("Cairo", "Nasr City", 10)
-            //            );
+            //    StandardShipment standard = new StandardShipment(
+            //        "SH001",
+            //        "Laptop",
+            //        3,
+            //        80,
+            //        new DeliveryAddress("Cairo", "Nasr City", 10)
+            //    );
 
-            //            ExpressShipment express = new ExpressShipment(
-            //                "SH002",
-            //                "Mobile Phone",
-            //                2,
-            //                60,
-            //                new DeliveryAddress("Cairo", "Maadi", 20),
-            //                30
-            //            );
+            //    ExpressShipment express = new ExpressShipment(
+            //        "SH002",
+            //        "Mobile Phone",
+            //        2,
+            //        60,
+            //        new DeliveryAddress("Cairo", "Maadi", 20),
+            //        30
+            //    );
 
-            //            IntternationalShipment international = new IntternationalShipment(
-            //                "SH003",
-            //                "Television",
-            //                8,
-            //                120,
-            //                new DeliveryAddress("Cairo", "Heliopolis", 30),
-            //                "Germany",
-            //                100
-            //            );
+            //    IntternationalShipment international = new IntternationalShipment(
+            //        "SH003",
+            //        "Television",
+            //        8,
+            //        120,
+            //        new DeliveryAddress("Cairo", "Heliopolis", 30),
+            //        "Germany",
+            //        100
+            //    );
 
-            //            center.AddShipment(standard);
-            //            center.AddShipment(express);
-            //            center.AddShipment(international);
+            //    center.AddShipment(standard);
+            //    center.AddShipment(express);
+            //    center.AddShipment(international);
 
-            //            Console.WriteLine("==========================================");
-            //            Console.WriteLine("Delivery Center");
-            //            Console.WriteLine("==========================================");
-            //            Console.WriteLine($"Driver : {center.Driver.FullName}");
-            //            Console.WriteLine("------------------------------------------");
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Delivery Center");
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine($"Driver : {center.Driver.FullName}");
+            //    Console.WriteLine("------------------------------------------");
 
-            //            center.PrintAllShipments();
+            //    center.PrintAllShipments();
+            //    center.PrintTrackingStatuses();
+            //    DeliveryReport report = new DeliveryReport();
+            //    report.PrintInsurance(standard);
+            //    report.PrintInsurance(express);
+            //    report.PrintInsurance(international);
+            //    ITrackable[] trackablesShimments =
+            //    {
+            //        standard, express, international,
+            //    };
+            //    foreach (ITrackable trackable in trackablesShimments)
+            //    {
+            //        Console.WriteLine(trackable.GetTrackingStatus());
 
-            //            Console.WriteLine("==========================================");
-            //            Console.WriteLine("Printing Using DeliveryHelper...");
+            //    }
+            //    IInsurable[] insurables =
+            //    {
 
-            //            Console.WriteLine("Standard Shipment Printed Successfully.");
-            //            Console.WriteLine("Express Shipment Printed Successfully.");
-            //            Console.WriteLine("International Shipment Printed Successfully.");
+            //        standard , express, international,
+            //    };
 
-            //            Console.WriteLine("==========================================");
-            //            Console.WriteLine("Updating Weight...");
+            //    foreach (IInsurable insurable in insurables)
+            //    {
+            //        Console.WriteLine(insurable.CalculateInsurance());
+            //    }
 
-            //            Console.WriteLine($"Original Weight : {standard.Weight} KG");
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Printing Using DeliveryHelper...");
 
-            //            standard.UpdateWeight(5);
+            //    Console.WriteLine("Standard Shipment Printed Successfully.");
+            //    Console.WriteLine("Express Shipment Printed Successfully.");
+            //    Console.WriteLine("International Shipment Printed Successfully.");
 
-            //            Console.WriteLine($"Updated Weight : {standard.Weight} KG");
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Updating Weight...");
 
-            //            standard.UpdateWeight(5, 0.5m);
+            //    Console.WriteLine($"Original Weight : {standard.Weight} KG");
 
-            //            Console.WriteLine($"Updated Weight After Packing : {standard.Weight} KG");
+            //    standard.UpdateWeight(5);
 
-            //            Console.WriteLine("==========================================");
-            //            Console.WriteLine("Printing Using Shipment[]...");
+            //    Console.WriteLine($"Updated Weight : {standard.Weight} KG");
 
-            //            Shipment[] shipments =
-            //            {
+            //    standard.UpdateWeight(5, 0.5m);
+
+            //    Console.WriteLine($"Updated Weight After Packing : {standard.Weight} KG");
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Printing Using Shipment[]...");
+
+            //    Shipment[] shipments =
+            //    {
             //    standard,
             //    express,
             //    international
             //};
 
-            //            foreach (Shipment shipment in shipments)
-            //            {
-            //                if (shipment is StandardShipment)
-            //                    Console.WriteLine("Standard Shipment...");
+            //    foreach (Shipment shipment in shipments)
+            //    {
+            //        if (shipment is StandardShipment)
+            //            Console.WriteLine("Standard Shipment...");
 
-            //                else if (shipment is ExpressShipment)
-            //                    Console.WriteLine("Express Shipment...");
+            //        else if (shipment is ExpressShipment)
+            //            Console.WriteLine("Express Shipment...");
 
-            //                else if (shipment is IntternationalShipment)
-            //                    Console.WriteLine("International Shipment...");
-            //            }
+            //        else if (shipment is IntternationalShipment)
+            //            Console.WriteLine("International Shipment...");
+            //    }
 
-            //            Console.WriteLine("==========================================");
-            //        }
+            //    Console.WriteLine("==========================================");
+            //}
 
 
             #endregion
 
-           
+
+            
             #region OOP04 Part01
             //q1 
             // a- Abstraction is the process of hiding unnecessary implementation details
@@ -156,12 +181,99 @@ namespace FirstrApp8
             // c- A class cannot inherit from multiple classes, but it can implement multiple interfaces.
             #endregion
 
+            #region OOP04 Part2
+            //{
+            //    Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
+
+            //    DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            //    center.Driver = driver;
+
+            //    StandardShipment standard = new StandardShipment(
+            //        "SH001",
+            //        "Laptop",
+            //        3,
+            //        80,
+            //        new DeliveryAddress("Cairo", "Nasr City", 10)
+            //    );
+
+            //    ExpressShipment express = new ExpressShipment(
+            //        "SH002",
+            //        "Mobile Phone",
+            //        2,
+            //        60,
+            //        new DeliveryAddress("Cairo", "Maadi", 20),
+            //        30
+            //    );
+
+            //    IntternationalShipment international = new IntternationalShipment(
+            //        "SH003",
+            //        "Television",
+            //        8,
+            //        120,
+            //        new DeliveryAddress("Cairo", "Heliopolis", 30),
+            //        "Germany",
+            //        100
+            //    );
+
+            //    center.AddShipment(standard);
+            //    center.AddShipment(express);
+            //    center.AddShipment(international);
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Delivery Center");
+            //    Console.WriteLine("==========================================");
+
+            //    center.PrintAllShipments();
+
+            //    Console.WriteLine();
+            //    Console.WriteLine("Tracking Status");
+            //    Console.WriteLine();
+
+            //    center.PrintTrackingStatuses();
+
+            //    Console.WriteLine("=====================");
+
+            //    Console.WriteLine();
+            //    Console.WriteLine("Insurance");
+            //    Console.WriteLine();
+
+            //    DeliveryReport report = new DeliveryReport();
+
+            //    Console.Write("Standard Shipment Insurance : ");
+            //    report.PrintInsurance(standard);
+            //    Console.WriteLine();
+            //    Console.Write("Express Shipment Insurance : ");
+            //    report.PrintInsurance(express);
+            //    Console.WriteLine();
+            //    Console.Write("International Shipment Insurance : ");
+            //    report.PrintInsurance(international);
+            //    Console.WriteLine();
+
+            //    Console.WriteLine();
+            //    Console.WriteLine("=========================");
+
+            //    Console.WriteLine("Interface Polymorphism Demonstrated Successfully.");
+            #endregion
 
 
 
-       
 
 
         }
     }
 }
+
+
+
+            
+
+
+
+
+
+
+
+
+
+        
+    

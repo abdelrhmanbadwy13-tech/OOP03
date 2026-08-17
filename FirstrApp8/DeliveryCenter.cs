@@ -8,7 +8,7 @@ namespace FirstrApp8
     {
 
         public Driver Driver { get; set; }
-        private string centerName;
+        private string? centerName;
         public string CenterName
         {
             get { return centerName; }
@@ -24,10 +24,10 @@ namespace FirstrApp8
         }
 
 
-        private Shipment[] shipments = new Shipment[20];
+        private Shipment[] shipments = new Shipment?[20];
 
 
-        public Shipment this[int index]
+        public Shipment? this[int index]
         {
             get
             {
@@ -46,7 +46,7 @@ namespace FirstrApp8
         }
 
         // String Indexer .. 
-        public Shipment this[string trackingCode]
+        public Shipment? this[string trackingCode]
         {
             get
             {
@@ -105,6 +105,22 @@ namespace FirstrApp8
             }
         }
 
+        public void PrintTrackingStatuses()
+        {
+
+            foreach (Shipment shipment in shipments)
+            {
+                if (shipment != null)
+                {
+                   // ITrackable trackable = shipment;
+
+                    Console.WriteLine(((ITrackable)shipment).GetTrackingStatus());
+
+                }
+
+            }
+
+        }
 
 
 
@@ -112,5 +128,6 @@ namespace FirstrApp8
 
 
 
+        
     }
 }

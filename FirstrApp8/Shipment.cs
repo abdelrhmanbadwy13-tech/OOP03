@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace FirstrApp8
+
 {
-    internal class Shipment
+    internal abstract class Shipment //oop4
     {
         // Private Fields
         private string trackingCode;
@@ -13,8 +14,7 @@ namespace FirstrApp8
         private decimal deliveryFee;
         private DeliveryAddress destination;
 
-
-
+     
         // TrackingCode (Read Only from outside)
         public string TrackingCode
         {
@@ -63,34 +63,33 @@ namespace FirstrApp8
         public DeliveryAddress Destination
         {
             get { return destination; }
-            set { destination = value; }
+            set {
+                if(value != null)
+                
+                destination = value; }
         }
 
         // Calculated Property
-        public virtual decimal EstimatedCost
-        {
-            get
-            {
-                return DeliveryFee + (Weight * 5);
-            }
-        }
+        public abstract decimal EstimatedCost
+        {  get; }
 
         // First Constructor
-        public Shipment(string trackingCode)
+        public Shipment(string trackingCode,
+            string description,
+            decimal weight,
+            decimal deliveryFee,
+            DeliveryAddress destination)
         {
             TrackingCode = trackingCode;
-            Description = "Unknown";
-            Weight = 1;
-            DeliveryFee = 50;
-            Destination = new DeliveryAddress("Unknown", "Unknown", 0);
+            Description = description;
+            Weight = weight;
+            DeliveryFee = deliveryFee;
+            Destination = destination;
         }
 
         // Second Constructor
-        public Shipment(string trackingCode,
-                        string description,
-                        decimal weight,
-                        decimal deliveryFee,
-                        DeliveryAddress destination)
+        public Shipment(string trackingCode)
+                       
         {
             TrackingCode = trackingCode;
             Description = description;
@@ -101,6 +100,7 @@ namespace FirstrApp8
 
         public void UpdateWeight(decimal weight)
         {
+          
             Weight = weight;
         }
 
@@ -119,31 +119,11 @@ namespace FirstrApp8
         }
         // Add two Methode
 
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine($"Tracking Code   : {TrackingCode}");
-            Console.WriteLine($"Description     : {Description}");
-            Console.WriteLine($"Weight          : {Weight} KG ");
-            Console.WriteLine($"Delivery Fee    : {DeliveryFee} EGP");
-            Console.WriteLine($"Destination     : {Destination.GetFullAddress()}");
-            Console.WriteLine($"Estimated Cost  : {EstimatedCost} EGP");
-        }
+        public abstract void PrintShipment();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //internal static bool CalcualeInsurance()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
