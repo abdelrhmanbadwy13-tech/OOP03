@@ -2,7 +2,7 @@
 using System.Xml.Linq;
 
 namespace FirstrApp8
-{
+{ 
     internal class Program
     {
         static void Main(string[] args)
@@ -41,100 +41,125 @@ namespace FirstrApp8
 
             #region part2
 
-            
-           // {
-    //            Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
 
-    //            DeliveryCenter center = new DeliveryCenter("Delivery Center");
-    //            center.Driver = driver;
+            // {
+            //            Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
 
-    //            StandardShipment standard = new StandardShipment(
-    //                "SH001",
-    //                "Laptop",
-    //                3,
-    //                80,
-    //                new DeliveryAddress("Cairo", "Nasr City", 10)
-    //            );
+            //            DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            //            center.Driver = driver;
 
-    //            ExpressShipment express = new ExpressShipment(
-    //                "SH002",
-    //                "Mobile Phone",
-    //                2,
-    //                60,
-    //                new DeliveryAddress("Cairo", "Maadi", 20),
-    //                30
-    //            );
+            //            StandardShipment standard = new StandardShipment(
+            //                "SH001",
+            //                "Laptop",
+            //                3,
+            //                80,
+            //                new DeliveryAddress("Cairo", "Nasr City", 10)
+            //            );
 
-    //            IntternationalShipment international = new IntternationalShipment(
-    //                "SH003",
-    //                "Television",
-    //                8,
-    //                120,
-    //                new DeliveryAddress("Cairo", "Heliopolis", 30),
-    //                "Germany",
-    //                100
-    //            );
+            //            ExpressShipment express = new ExpressShipment(
+            //                "SH002",
+            //                "Mobile Phone",
+            //                2,
+            //                60,
+            //                new DeliveryAddress("Cairo", "Maadi", 20),
+            //                30
+            //            );
 
-    //            center.AddShipment(standard);
-    //            center.AddShipment(express);
-    //            center.AddShipment(international);
+            //            IntternationalShipment international = new IntternationalShipment(
+            //                "SH003",
+            //                "Television",
+            //                8,
+            //                120,
+            //                new DeliveryAddress("Cairo", "Heliopolis", 30),
+            //                "Germany",
+            //                100
+            //            );
 
-    //            Console.WriteLine("==========================================");
-    //            Console.WriteLine("Delivery Center");
-    //            Console.WriteLine("==========================================");
-    //            Console.WriteLine($"Driver : {center.Driver.FullName}");
-    //            Console.WriteLine("------------------------------------------");
+            //            center.AddShipment(standard);
+            //            center.AddShipment(express);
+            //            center.AddShipment(international);
 
-    //            center.PrintAllShipments();
+            //            Console.WriteLine("==========================================");
+            //            Console.WriteLine("Delivery Center");
+            //            Console.WriteLine("==========================================");
+            //            Console.WriteLine($"Driver : {center.Driver.FullName}");
+            //            Console.WriteLine("------------------------------------------");
 
-    //            Console.WriteLine("==========================================");
-    //            Console.WriteLine("Printing Using DeliveryHelper...");
+            //            center.PrintAllShipments();
 
-    //            Console.WriteLine("Standard Shipment Printed Successfully.");
-    //            Console.WriteLine("Express Shipment Printed Successfully.");
-    //            Console.WriteLine("International Shipment Printed Successfully.");
+            //            Console.WriteLine("==========================================");
+            //            Console.WriteLine("Printing Using DeliveryHelper...");
 
-    //            Console.WriteLine("==========================================");
-    //            Console.WriteLine("Updating Weight...");
+            //            Console.WriteLine("Standard Shipment Printed Successfully.");
+            //            Console.WriteLine("Express Shipment Printed Successfully.");
+            //            Console.WriteLine("International Shipment Printed Successfully.");
 
-    //            Console.WriteLine($"Original Weight : {standard.Weight} KG");
+            //            Console.WriteLine("==========================================");
+            //            Console.WriteLine("Updating Weight...");
 
-    //            standard.UpdateWeight(5);
+            //            Console.WriteLine($"Original Weight : {standard.Weight} KG");
 
-    //            Console.WriteLine($"Updated Weight : {standard.Weight} KG");
+            //            standard.UpdateWeight(5);
 
-    //            standard.UpdateWeight(5, 0.5m);
+            //            Console.WriteLine($"Updated Weight : {standard.Weight} KG");
 
-    //            Console.WriteLine($"Updated Weight After Packing : {standard.Weight} KG");
+            //            standard.UpdateWeight(5, 0.5m);
 
-    //            Console.WriteLine("==========================================");
-    //            Console.WriteLine("Printing Using Shipment[]...");
+            //            Console.WriteLine($"Updated Weight After Packing : {standard.Weight} KG");
 
-    //            Shipment[] shipments =
-    //            {
-    //    standard,
-    //    express,
-    //    international
-    //};
+            //            Console.WriteLine("==========================================");
+            //            Console.WriteLine("Printing Using Shipment[]...");
 
-    //            foreach (Shipment shipment in shipments)
-    //            {
-    //                if (shipment is StandardShipment)
-    //                    Console.WriteLine("Standard Shipment...");
+            //            Shipment[] shipments =
+            //            {
+            //    standard,
+            //    express,
+            //    international
+            //};
 
-    //                else if (shipment is ExpressShipment)
-    //                    Console.WriteLine("Express Shipment...");
+            //            foreach (Shipment shipment in shipments)
+            //            {
+            //                if (shipment is StandardShipment)
+            //                    Console.WriteLine("Standard Shipment...");
 
-    //                else if (shipment is IntternationalShipment)
-    //                    Console.WriteLine("International Shipment...");
-    //            }
+            //                else if (shipment is ExpressShipment)
+            //                    Console.WriteLine("Express Shipment...");
 
-    //            Console.WriteLine("==========================================");
-    //        }
+            //                else if (shipment is IntternationalShipment)
+            //                    Console.WriteLine("International Shipment...");
+            //            }
+
+            //            Console.WriteLine("==========================================");
+            //        }
 
 
             #endregion
 
+           
+            #region OOP04 Part01
+            //q1 
+            // a- Abstraction is the process of hiding unnecessary implementation details
+            // and showing only the essential features of an object to the user
+            // b- Hide unnecessary implementation details.
+            // Focus on the important features of an object.
+            // 4 pillars
+            // Encapsulation
+            //Inheritance
+            //Polymorphism
+            //Abstraction
+
+            // q2 
+            // a- An abstract class can contain common data and behavior,
+            // while an interface defines a contract that classes must implement
+            //  b- We choose an interface when we want to define a common contract
+            //  or behavior that different classes must implement.
+            // c- A class cannot inherit from multiple classes, but it can implement multiple interfaces.
+            #endregion
+
+
+
+
+       
 
 
         }
