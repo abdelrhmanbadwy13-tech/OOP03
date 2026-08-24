@@ -5,7 +5,7 @@ using System.Text;
 namespace FirstrApp8
 
 {
-    internal abstract class Shipment //oop4
+    internal abstract partial class Shipment //oop4
     {
         // Private Fields
         private string trackingCode;
@@ -14,7 +14,8 @@ namespace FirstrApp8
         private decimal deliveryFee;
         private DeliveryAddress destination;
 
-     
+        public static int TotalShipmentsCreated;
+
         // TrackingCode (Read Only from outside)
         public string TrackingCode
         {
@@ -85,6 +86,7 @@ namespace FirstrApp8
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         // Second Constructor
@@ -96,6 +98,13 @@ namespace FirstrApp8
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
+        }
+
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
         }
 
         public void UpdateWeight(decimal weight)
@@ -121,9 +130,37 @@ namespace FirstrApp8
 
         public abstract void PrintShipment();
 
+
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
         //internal static bool CalcualeInsurance()
         //{
         //    throw new NotImplementedException();
         //}
+
+        public Shipment CopyShipment()
+        {
+            return (Shipment)MemberwiseClone();
+        }
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)MemberwiseClone();
+        }
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)MemberwiseClone();
+
+            copy.Destination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber
+            );
+
+            return copy;
+        }
+
     }
 }

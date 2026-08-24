@@ -291,7 +291,199 @@ namespace FirstrApp8
 
             #endregion
 
+            #region OOP05 Part2
 
+            //{
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Smart Delivery Management System");
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine();
+            //    Console.WriteLine("Shipment System Initialized");
+            //    Console.WriteLine();
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Creating Shipments...");
+            //    Console.WriteLine("==========================================");
+
+            //    Driver driver = new Driver(
+            //        1,
+            //        "Ahmed Mohamed",
+            //        "01012345678"
+            //    );
+
+            //    DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            //    center.Driver = driver;
+
+            //    StandardShipment standard = new StandardShipment(
+            //        "SH001",
+            //        "Laptop",
+            //        3,
+            //        80,
+            //        new DeliveryAddress("Cairo", "Nasr City", 10)
+            //    );
+
+            //    ExpressShipment express = new ExpressShipment(
+            //        "SH002",
+            //        "Mobile Phone",
+            //        2,
+            //        60,
+            //        new DeliveryAddress("Cairo", "Maadi", 20),
+            //        30
+            //    );
+
+            //    IntternationalShipment international =
+            //        new IntternationalShipment(
+            //            "SH003",
+            //            "Television",
+            //            8,
+            //            120,
+            //            new DeliveryAddress("Cairo", "Heliopolis", 30),
+            //            "Germany",
+            //            100
+            //        );
+
+           
+
+            //    center.AddShipment(standard);
+            //    center.AddShipment(express);
+            //    center.AddShipment(international);
+
+            //    Console.WriteLine("Standard Shipment Created");
+            //    Console.WriteLine("Express Shipment Created");
+            //    Console.WriteLine("International Shipment Created");
+            //    Console.WriteLine();
+
+            //    Console.WriteLine(
+            //        $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+            //    Console.WriteLine();
+                
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Object Copying");
+            //    Console.WriteLine("==========================================");
+
+            //    Shipment shipment2 = standard;
+
+            //    Console.WriteLine(
+            //        $"Original Shipment : {standard.TrackingCode}");
+
+            //    Console.WriteLine(
+            //        $"Assigned Shipment : {shipment2.TrackingCode}");
+
+            //    Console.WriteLine(
+            //        $"Same Object : {ReferenceEquals(standard, shipment2)}");
+
+               
+
+            //    Console.WriteLine("------------------------------------------");
+            //    Console.WriteLine("Shallow Copy");
+            //    Console.WriteLine("------------------------------------------");
+
+            //    Shipment shallowCopy = standard.ShallowCopy();
+
+            //    Console.WriteLine(
+            //        $"Original Shipment Address : {standard.Destination.City}");
+
+            //    Console.WriteLine(
+            //        $"Copied Shipment Address : {shallowCopy.Destination.City}");
+            //    Console.WriteLine();
+            //    Console.WriteLine("Changing copied shipment address...");
+            //    Console.WriteLine();
+            //    shallowCopy.Destination.City = "Giza";
+
+            //    Console.WriteLine(
+            //        $"Original Shipment Address : {standard.Destination.City}");
+
+            //    Console.WriteLine(
+            //        $"Copied Shipment Address : {shallowCopy.Destination.City}");
+            //    Console.WriteLine();
+            //    Console.WriteLine(
+            //        $"Same DeliveryAddress Object : " +
+            //        $"{ReferenceEquals(
+            //            standard.Destination,
+            //            shallowCopy.Destination)}");
+
+               
+
+            //    Console.WriteLine("------------------------------------------");
+            //    Console.WriteLine("Deep Copy");
+            //    Console.WriteLine("------------------------------------------");
+
+            //    standard.Destination.City = "Cairo";
+
+            //    Shipment deepCopy = standard.DeepCopy();
+
+            //    Console.WriteLine(
+            //        $"Original Shipment Address : {standard.Destination.City}");
+
+            //    Console.WriteLine(
+            //        $"Copied Shipment Address : {deepCopy.Destination.City}");
+            //    Console.WriteLine();
+            //    Console.WriteLine("Changing copied shipment address...");
+            //    Console.WriteLine();
+            //    deepCopy.Destination.City = "Giza";
+
+            //    Console.WriteLine(
+            //        $"Original Shipment Address : {standard.Destination.City}");
+
+            //    Console.WriteLine(
+            //        $"Copied Shipment Address : {deepCopy.Destination.City}");
+            //    Console.WriteLine();
+            //    Console.WriteLine(
+            //        $"Same DeliveryAddress Object : " +
+            //        $"{ReferenceEquals(
+            //            standard.Destination,
+            //            deepCopy.Destination)}");
+
+             
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Extension Methods");
+            //    Console.WriteLine("==========================================");
+
+            //    Console.WriteLine(standard.GetSummary());
+            //    Console.WriteLine(express.GetSummary());
+            //    Console.WriteLine(international.GetSummary());
+
+            //    Console.WriteLine(
+            //        $"SH001 Is Delivered : {standard.IsDelivered()}");
+
+            //    Console.WriteLine(
+            //        $"SH003 Is Delivered : {international.IsDelivered()}");
+
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Tracking Status");
+            //    Console.WriteLine("==========================================");
+
+            //    express.UpdateTrackingStatus("Out For Delivery");
+
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Static Utilities");
+            //    Console.WriteLine("==========================================");
+
+            //    DeliveryUtilities.PrintSeparator();
+            //    Console.WriteLine("Delivery Center");
+            //    DeliveryUtilities.PrintSeparator();
+
+            //    Console.WriteLine(
+            //        $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+
+              
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Partial Method");
+            //    Console.WriteLine("==========================================");
+
+            //    international.UpdateTrackingStatus("Delivered");
+
+           
+
+            //    Console.WriteLine("==========================================");
+            //    Console.WriteLine("Assignment Completed");
+            //    Console.WriteLine("==========================================");
+            //}
+            #endregion
 
 
 
