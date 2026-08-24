@@ -1,5 +1,8 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel;
+using System.Numerics;
+using System.Text;
 using System.Xml.Linq;
+using static System.Net.WebRequestMethods;
 
 namespace FirstrApp8
 {
@@ -160,7 +163,7 @@ namespace FirstrApp8
             #endregion
 
 
-            
+
             #region OOP04 Part01
             //q1 
             // a- Abstraction is the process of hiding unnecessary implementation details
@@ -253,6 +256,39 @@ namespace FirstrApp8
             //    Console.WriteLine("=========================");
 
             //    Console.WriteLine("Interface Polymorphism Demonstrated Successfully.");
+            #endregion
+
+            #region OOP05 Part1
+            // Q1
+            // a) Both variables refer to the same object.
+            //b) No, it only copies the reference.
+            //c) Reference copying shares the same object; object copying creates a new object.
+
+            //Q2
+            //a) Creates a new object but shares reference - type members.
+            //b) Creates a new object with independent reference - type members.
+            //c) Reference - type members are shared.
+            //d) Reference - type members are copied independently.
+            //e) When modifying the copy without affecting the original.
+
+            //Q3
+            // a) Static field is shared by all objects; instance field belongs to each object.
+            //b) Static method belongs to the class and cannot directly access instance members.
+            // c) Static constructor runs automatically once when the class is first used.
+            //  d) Static class contains static members only; you cannot create an object from it.
+
+            //Q4
+            // a) Adds methods to an existing class without modifying it.
+            //b) this
+            //c) Inside a static class.
+            // d) No, it cannot access private members directly.
+
+            //Q5
+            //  a) A class split into multiple files.
+            //b) To organize and separate the code.
+            //c) A method declared in one part and implemented in another.
+            //d) It can be removed by the compiler if it has no implementation.
+
             #endregion
 
 
